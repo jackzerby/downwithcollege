@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.3'
+
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
@@ -15,7 +16,7 @@ gem 'shortcode'
 gem 'simple_form'
 gem 'ckeditor', '4.0.4'
 gem 'metamagic'
-
+gem 'responders', '~> 2.0'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
