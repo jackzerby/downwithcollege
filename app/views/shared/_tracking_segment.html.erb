@@ -1,0 +1,38 @@
+<%# Embed %>
+<script type="text/javascript">
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+  <% if Rails.env.production? %>
+    analytics.load("qhbjvqi5lk");
+  <% else %>
+    analytics.load("t9gjv57vh4");
+  <% end %>
+  <% if member_signed_in? and current_member.subscribed? %>
+    analytics.page({}, { integrations: { 'Inspectlet': false }});
+    analytics.identify('<%= current_member.id %>', {
+      email: '<%= current_member.email %>',
+      username: '<%= current_member.email %>',
+      name: '<%= current_member.name %>',
+      first_name: '<%= current_member.first_name %>',
+      last_name: '<%= current_member.last_name %>',
+      created_at: '<%= current_member.created_at %>',
+      app_belt: '<%= current_member.belt.title %>',
+      app_city: '<%= current_member.city %>',
+      app_state: '<%= current_member.state %>',
+      app_zip: '<%= current_member.zip %>',
+      app_dob_m: '<%= current_member.dob_m %>',
+      app_dob_d: '<%= current_member.dob_d %>',
+      app_dob_y: '<%= current_member.dob_y %>',
+      app_phone: '<%= current_member.phone %>',
+      app_coupon: '<%= current_member.coupon %>',
+      app_logins: '<%= current_member.sign_in_count %>',
+      app_subscribed: '<%= current_member.subscribed_at %>',
+      app_role: '<% if is_admin? %>admin<% else %>member<% end %>',
+      app_status: ''
+    });
+  <% elsif member_signed_in? and is_admin? %>
+    analytics.page({}, { integrations: { 'All': false }});
+  <% else %>
+    analytics.page();
+  <% end %>
+  }}();
+</script>

@@ -1,0 +1,14 @@
+<% unless notice.blank? && alert.blank? %>
+  <% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="app-message">
+            <%= msg %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+

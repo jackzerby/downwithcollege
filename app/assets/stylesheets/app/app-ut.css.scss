@@ -1,0 +1,48 @@
+/* ----------------------------------------------------
+            Font Families
+----------------------------------------------------- */
+$font_a: "adobe-garamond-pro", sans-serif;
+$font_b: "adobe-garamond-pro", sans-serif;
+
+/* ----------------------------------------------------
+            Colors
+----------------------------------------------------- */
+$color_a:#ffffff;
+$color_b:#efefef;
+$color_c:#dddddd;
+$color_d:#777777;
+$color_e:#222222;
+$color_f:#Ff3300;
+$color_g:#0F9155;
+$color_h:#444444;
+.color-a { color:$color_a; }
+.color-b { color:$color_b; }
+.color-c { color:$color_c; }
+.color-d { color:$color_d; }
+.color-e { color:$color_e; }
+.color-f { color:$color_f; }
+.color-g { color:$color_g; }
+.color-h { color:$color_h; }
+.color-bg-a { background-color:$color_a; }
+.color-bg-b { background-color:$color_b; }
+.color-bg-c { background-color:$color_c; }
+.color-bg-d { background-color:$color_d; }
+.color-bg-e { background-color:$color_e; }
+.color-bg-f { background-color:$color_f; }
+.color-bg-g { background-color:$color_g; }
+.color-bg-h { background-color:$color_h; }
+
+/* ----------------------------------------------------
+             UT
+----------------------------------------------------- */
+@mixin ut-clear { content:""; display:block; clear:both; height:0; visibility:hidden; }
+@mixin ut-border-radius($value) { -moz-border-radius:$value; -webkit-border-radius:$value; border-radius:$value; }
+@mixin ut-box-sizing($value) { -moz-box-sizing:$value; -webkit-box-sizing:$value; box-sizing:$value; }
+@mixin ut-box-shadow($values) { -moz-box-shadow:$values; -webkit-box-shadow:$values; box-shadow:$values; }
+@mixin ut-text-shadow($values) { -moz-text-shadow:$values; -webkit-text-shadow:$values; text-shadow:$values; }
+@mixin ut-rotate ($rotation) { -moz-transform:rotate($rotation); -webkit-transform:rotate($rotation); -ms-transform:rotate($rotation); transform:rotate($rotation); }
+@mixin ut-opacity ($value) { -moz-opacity:$value/100; -webkit-opacity:$value/100; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="$value")"; opacity:$value/100; }
+@mixin ut-transition ($values) { -webkit-transition:$values; -moz-transition:$values; -o-transition:$values; transition:$values; }
+@mixin ut-user-select ($value) { -webkit-user-select:$value; -moz-user-select:$value; -ms-user-select:$value; user-select:$value; }
+
+

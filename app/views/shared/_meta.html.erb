@@ -1,0 +1,28 @@
+<%# Metadata %>
+<%= display_meta_tags %>
+<%= csrf_meta_tags %>
+<link rel="canonical" href="http://www.thisisworkshop.com/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="google-site-verification" content="PZKTw-VECZ-6OfqH5yd0BUST6uS4GGOKO1uXSxBwwWM" />
+<meta itemscope="" itemtype="website">
+<meta itemprop="description" content="The Only Action-Minded Training Platform For Young Entrepreneurs">
+<meta itemprop="image" content="http://workshopapp.s3.amazonaws.com/global-logo.png">
+
+<%# Twitter %>
+<%= display_meta_tags :twitter => {
+  :title => :title,
+  :description => :description,
+  :image => :image,
+  :card => "summary_large_image",
+  :site => "@thisisworkshop",
+  :creator => "@thisisworkshop"
+} %>
+
+<%# Facebook %>
+<%= display_meta_tags :og => {
+  :title => :title,
+  :description => :description,
+  :image => :image,
+  :type => "website",
+  :site_name => "The Workshop School Of Action"
+} %>

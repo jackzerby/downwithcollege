@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Downwithcollege</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    
+    <%# Meta %>
+    <%= render "shared/meta" %>
+  
+    <%# Favicon %>
+    <%= render "shared/favicon" %>
+    
+    <%# Stylesheets %>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    
+    <%# Javascript %>
+    <%= javascript_include_tag "application" %>
+  </head>
+  <body class="app<% if is_mobile? %> app-mobile<% else %> app-desktop<% end %> app-controller-<%= controller_name %> app-controller-action-<%= action_name %><% if @body_class.present? %> <%= @body_class %><% end %>">
 
-<%= yield %>
-
-</body>
+    <%# Messages %>
+		<%= render "shared/messages" %>
+		
+		<%# Logo %>
+    <%= render "shared/logo" %>
+    
+		<%# Content %>
+		<%= yield %>
+    
+  </body>
 </html>

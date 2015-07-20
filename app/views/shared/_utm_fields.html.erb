@@ -1,0 +1,15 @@
+<% if params[:utm_source] %>
+  <input name="inf_custom_CampaignSource" type="hidden" value="<%= params[:utm_source] %>" />
+<% end %>
+<% if params[:utm_medium] %>
+  <input name="inf_custom_CampaignMedium" type="hidden" value="<%= params[:utm_medium] %>" />
+<% end %>
+<% if params[:utm_term] %>
+  <input name="inf_custom_CampaignTerm" type="hidden" value="<%= params[:utm_term] %>" />
+<% end %>
+<% if params[:utm_content] %>
+  <input name="inf_custom_CampaignContent" type="hidden" value="<%= params[:utm_content] %>" />
+<% end %>
+<% if params[:utm_campaign] %>
+  <input name="inf_custom_CampaignName" type="hidden" value="<%= params[:utm_campaign] %>" />
+<% end %>

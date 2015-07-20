@@ -10,9 +10,6 @@ end
 gem 'therubyracer', :platform=>:ruby
 gem 'thin'
 
-# css
-gem 'bootstrap-sass'
-
 # js
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
