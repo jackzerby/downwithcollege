@@ -14,6 +14,7 @@
     
     <%# Javascript %>
     <%= javascript_include_tag "application" %>
+  	<%= render "shared/plugin_typekit" %>
   </head>
   <body class="app<% if is_mobile? %> app-mobile<% else %> app-desktop<% end %> app-controller-<%= controller_name %> app-controller-action-<%= action_name %><% if @body_class.present? %> <%= @body_class %><% end %>">
 

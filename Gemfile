@@ -7,6 +7,8 @@ group :assets do
   gem 'sass-rails'
   gem 'uglifier', '>= 1.3.0'
 end
+
+# server
 gem 'therubyracer', :platform=>:ruby
 gem 'thin'
 

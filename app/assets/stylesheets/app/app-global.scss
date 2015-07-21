@@ -2,3 +2,68 @@
               Imports
  ----------------------------------------------------- */
 @import "app-ut";
+
+/* ----------------------------------------------------
+          Body
+----------------------------------------------------- */
+body { color:#222222; font-size:16px; line-height:1.65; font-family:$font_a;  }
+body.js-fixed { overflow:hidden; }
+
+/* ----------------------------------------------------
+           Sections
+----------------------------------------------------- */
+.app section { margin-bottom:40px; }
+.app section.app-section-l { margin-bottom:80px; }
+.app section.app-section-m { margin-bottom:20px; }
+.app section.app-section-s { margin-bottom:10px; }
+.app section.app-section-t { margin-bottom:5px; }
+.app section.app-section-pxl { margin-bottom:18%; }
+.app section.app-section-pl { margin-bottom:13%; }
+.app section.app-section-pm { margin-bottom:10%; }
+.app section.app-section-ps { margin-bottom:7%; }
+.app section.app-section-divided { border-bottom:1px solid; }
+.app section.app-section-divided.app-section-pxl { margin-bottom:18%; padding-bottom:18%; }
+.app section.app-section-divided.app-section-pl { margin-bottom:13%; padding-bottom:13%; }
+.app section.app-section-divided.app-section-pm { margin-bottom:10%; padding-bottom:10%; }
+.app section.app-section-divided.app-section-s { margin-bottom:7%; padding-bottom:7%; }
+.app section.app-section-last { margin-bottom:0; border-bottom:none; }
+
+/* ----------------------------------------------------
+           Wrappers
+----------------------------------------------------- */
+.app-wrapper { margin-bottom:7%; padding:7% 0; }
+.app-wrapper-dark { background:#222222; color:white; }
+
+/* ----------------------------------------------------
+            Headers
+----------------------------------------------------- */
+.app h1 { margin:0 0 40px 0; font-family:$font_b; font-size:54px; line-height:130%; text-align:center; }
+.app h1.app-h-lm { margin:0 0 80px 0; }
+.app h1.app-h-sm { margin:0 0 20px 0; }
+.app h2 { margin:0 0 20px 0; font-size:36px; line-height:130%; }
+.app h2.app-h-lm { margin:0 0 40px 0; }
+.app h2.app-h-sm { margin:0 0 10px 0; }
+.app h3 { margin:0 0 10px 0; font-size:26px; line-height:130%; }
+.app h3.app-h-lm { margin:0 0 20px 0; }
+.app h3.app-h-sm { margin:0 0 5px 0; }
+.app h4 { margin:0 0 10px 0; font-weight:bold; }
+.app .app-h-nm { margin:0; }
+.app .app-h-nb { font-weight:normal; }
+
+/* ----------------------------------------------------
+            Text
+----------------------------------------------------- */
+.app label { display:block; margin-bottom:5px; cursor:pointer; }
+.app p { margin:0 0 20px 0; }
+.app p:last-child { margin:0; }
+.app p.app-p-sm { margin-bottom:10px; }
+.app-txt-l { font-size:24px; }
+.app-blockquote { margin-bottom:30px; padding-left:30px; border-left:1px dotted; }
+
+/* ----------------------------------------------------
+           Lists
+----------------------------------------------------- */
+.app-ul { margin:0 0 18px 18px; padding-left:18px; list-style:square; }
+.app-ul-fa.fa-ul { margin-bottom:20px; }
+.app-ol { margin:0 0 18px 18px; padding-left:18px; }
+
