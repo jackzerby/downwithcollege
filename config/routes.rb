@@ -5,10 +5,12 @@ Rails.application.routes.draw do
 
   # Programs
   get "/programs", to: "programs#index"
-  get "/programs/crazycopywriting", to: "programs#crazycopywriting"
-  get "/programs/onehundred", to: "programs#onehundred"
-  get "/programs/showdown", to: "programs#showdown"
-
+  namespace :programs do
+    resources :copywriting, only: [:index, :show]
+    resources :onehundred, only: [:index, :show]
+    resources :showdown, only: [:index, :show]
+  end
+  
   # Trainings
   get "/training", to: "trainings#index"
 

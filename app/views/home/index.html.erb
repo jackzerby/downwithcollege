@@ -1,7 +1,5 @@
 <%# Header %>
-<div class="app-header app-home-header">
-  <h1 class="app-header-h1">Be Careful. There’s something missing from your formal education.</h1>
-</div>
+<h1 class="app-header-h1-mast app-header-h1"><span class="app-header-h1-text">Be Careful. There’s something missing <br />from your formal education.</span></h1>
 
 <%# Intro %>
 <div class="app-wrapper app-txt-l">
@@ -9,38 +7,52 @@
     <div class="app-section-header">The Facts</div>
     <div class="gr-row">
       <div class="gr-col-8 gr-col-offset-2">
+        <section>
         <ul class="app-ul-fa fa-ul">
-          <li><i class="app-fa fa-li fa fa-check color-danger"></i>9/10 employers feel that students are not adequately prepared for the workplace</li>
-          <li><i class="app-fa fa-li fa fa-check color-danger"></i>Only 8% of managers feel that entry-level employees are prepared to immediately contribute to their organization</li>
-          <li><i class="app-fa fa-li fa fa-check color-danger"></i>Insert another pain-extracting statistic (perhaps how many people hate their jobs/are underemployed)</li>
+          <li><i class="app-fa fa-li fa fa-check color-g"></i><strong>9/10 employers</strong> feel that students are not adequately prepared for the workplace</li>
+          <li><i class="app-fa fa-li fa fa-check color-g"></i>Only <strong>8% of managers</strong> feel that entry-level employees are prepared to immediately contribute to their organization</li>
+          <li><i class="app-fa fa-li fa fa-check color-g"></i>Insert another pain-extracting statistic (perhaps how many people hate their jobs/are underemployed)</li>
         </ul>
         <p>Let’s get real: The current curriculum is boring, antiquated and AVAILABLE FOR FREE <em>(if you look hard enough)</em> anywhere on the internet.  Plus anyone in “the real world” <em>(who is going to give it to you straight)</em> will tell you, “college didn’t teach me anything useful…”</p>
         <p>If you have always sensed this disconnect in your education but haven’t been sure of what to do about it, WELCOME TO THE PARTY:</p>
-        <h2>We Prepare Young Adults For The Reality Of Business With The Relevant, Practical, and Lucrative Skills They’ll Never Learn In School</h2>
+        </section>
+        <h2 class="app-align-c">We Prepare Young Adults For The Reality Of Business With The Relevant, Practical, and Lucrative Skills They’ll Never Learn In School</h2>
         <ul class="app-ul-fa fa-ul">
-          <li><i class="app-fa fa-li fa fa-check"></i>No Nonsense, Fluff, or BS</li>
-          <li><i class="app-fa fa-li fa fa-check"></i>No useless memorization or buzzword regurgitation</li>
-          <li><i class="app-fa fa-li fa fa-check"></i>No more buying expensive textbooks you’ll never read</li>
+          <li><i class="app-fa fa-li fa fa-check color-g"></i>No Nonsense, Fluff, or BS</li>
+          <li><i class="app-fa fa-li fa fa-check color-g"></i>No useless memorization or buzzword regurgitation</li>
+          <li><i class="app-fa fa-li fa fa-check color-g"></i>No more buying expensive textbooks you’ll never read</li>
         </ul>
         <p>You don’t need more INFORMATION or KNOWLEDGE (that’s all a commodity now, thanks to GOOGLE). You need real world ACTION and the SKILLS that come from developing yourself outside the classroom.</p>
-        <p>Click here to read more about what’s missing or scroll down to start filling in the gaps:</p>
+        <p><%= link_to "Click here", "/" %> to read more about what’s missing or scroll down to start filling in the gaps:</p>
       </div>
     </div>
   </div>
-<div>
+</div>
 
 <%# The Programs %>
 <div class="app-wrapper-dark app-wrapper">
   <div class="app-container gr-container">
-    <div class="app-section-header">The Programs</div>
-    <h2>Want To Be The Coolest College Student In The World And Optin To Our Awesome Email?</h2>
+    <div class="app-section-header-alt app-section-header"><span class="app-section-header-alt-text">The Programs</span></div>
+    <h2 class="app-align-c">Want To Be The Coolest College Student In The World And Optin To Our Awesome Email?</h2>
     <div class="gr-row">
-      <div class="gr-col-6">
-        <img src="app-home-programs-1-thumb" />
-        <h3>The Entrepreneur’s Showdown</h3>
-        <p class="color-c"><em>IDEA or the ENTREPRENEUR?</em></p>
+      <section class="app-grid-thumb gr-col-4">
+        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), programs_showdown_index_path %>
+        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
+        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
         We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </div>
+      </section>
+      <section class="app-grid-thumb gr-col-4">
+        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), programs_copywriting_index_path %>
+        <h3 class="app-grid-thumb-title"><a href="#">Crazy Copywriting Crazy Tony</a></h3>
+        <div class="app-grid-thumb-subtitle"><em>It’s Crazy How Bad Entry-Level Grads Suck Writing</em></div>
+        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
+      </section>
+      <section class="app-grid-thumb gr-col-4">
+        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), programs_onehundred_index_path %>
+        <h3 class="app-grid-thumb-title"><a href="#">100 Dollar Bill Sales Challenge</a></h3>
+        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
+        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
+      </section>
     </div>
   </div>
 </div>
@@ -49,15 +61,39 @@
 <div class="app-wrapper">
   <div class="app-container gr-container">
     <div class="app-section-header">Read These Books</div>
-    <h2>50 Business Books You’d Be Stupid Not To Try And Read.</h2>
-    <div class="app-tabs">
-      <a href="#" class="app-tabs-tab">Business</a>
-      <a href="#" class="js-active app-tabs-tab">Marketing</a>
-      <a href="#" class="app-tabs-tab">Design</a>
-    </div>
+    <h2 class="app-align-c">50 Business Books You’d Be Stupid Not To Try And Read.</h2>
+    <section class="app-tabs-container">
+      <div class="app-tabs">
+        <a href="#" data-category="all" class="js-selected js-books-tab app-tabs-tab">All</a>
+        <a href="#" data-category="business" class="js-books-tab app-tabs-tab">Business</a>
+        <a href="#" data-category="marketing" class="js-books-tab app-tabs-tab">Marketing</a>
+        <a href="#" data-category="design" class="js-books-tab app-tabs-tab">Design</a>
+      </div>
+    </section>
     <div class="gr-row">
-      <div class="gr-col-6">
-        <img src="app-home-books-" />
+      <div class="gr-row-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'marketing' }, :class => "js-books-book app-thumb"), "#" %>
+      </div>
+      <div class="gr-row-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'marketing' }, :class => "js-books-book app-thumb"), "#" %>
+      </div>
+      <div class="gr-row-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'design' }, :class => "js-books-book app-thumb"), "#" %>
+      </div>
+      <div class="gr-row-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'marketing' }, :class => "js-books-book app-thumb"), "#" %>
+      </div>
+      <div class="gr-row-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'business' }, :class => "js-books-book app-thumb"), "#" %>
+      </div>
+      <div class="gr-row-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'business' }, :class => "js-books-book app-thumb"), "#" %>
+      </div>
+      <div class="gr-row-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'business' }, :class => "js-books-book app-thumb"), "#" %>
+      </div>
+      <div class="gr-row-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'design' }, :class => "js-books-book app-thumb"), "#" %>
       </div>
     </div>
   </div>
@@ -66,19 +102,53 @@
 <%# The Programs %>
 <div class="app-wrapper-dark app-wrapper">
   <div class="app-container gr-container">
-    <div class="app-section-header">The Training</div>
-    <section>
-      <h2>Want To Be The Coolest College Student In The World And Optin To Our Awesome Email?</h2>
-      <p>Your classes are filled with INFORMATION but give you no practical experience outside the classroom. The only SKILLS you develop are memorization and regurgitation.  And internships really only introduce you to the corporate environment, they don’t train you.</p>
-      <p>We’re building the most ACTIONABLE training platform for young adults to help them develop the SKILLS they need to build their own business or help someone else build theirs.  COMING SOON. Only training being offered right now is through The Workshop School of Action.</p>
-    </section>
-    <div class="app-home-trainings gr-row">
-      <div class="gr-col-6">
-        <img src="app-home-trainings-training-1-thumb" />
-        <h3>The Entrepreneur’s Showdown</h3>
-        <p class="color-c"><em>IDEA or the ENTREPRENEUR?</em></p>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
+    <div class="app-section-header-alt app-section-header"><span class="app-section-header-alt-text">The Training</span></div>
+    <div class="gr-row">
+      <div class="gr-col-8 gr-col-offset-2">
+        <section>
+          <h2 class="app-align-c">Want To Be The Coolest College Student In The World And Optin To Our Awesome Email?</h2>
+          <p class="app-txt-l">Your classes are filled with INFORMATION but give you no practical experience outside the classroom. The only SKILLS you develop are memorization and regurgitation.  And internships really only introduce you to the corporate environment, they don’t train you.</p>
+          <p class="app-txt-l">We’re building the most ACTIONABLE training platform for young adults to help them develop the SKILLS they need to build their own business or help someone else build theirs.  COMING SOON. Only training being offered right now is through The Workshop School of Action.</p>
+        </section>
       </div>
+    </div>
+    <div class="gr-row">
+      <section class="app-grid-thumb gr-col-4">
+        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
+        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
+        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
+        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
+      </section>
+      <section class="app-grid-thumb gr-col-4">
+        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
+        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
+        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
+        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
+      </section>
+      <section class="app-grid-thumb gr-col-4">
+        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
+        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
+        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
+        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
+      </section>
+      <section class="app-grid-thumb gr-col-4">
+        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
+        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
+        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
+        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
+      </section>
+      <section class="app-grid-thumb gr-col-4">
+        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
+        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
+        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
+        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
+      </section>
+      <section class="app-grid-thumb gr-col-4">
+        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
+        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
+        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
+        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
+      </section>
     </div>
   </div>
 </div>
@@ -87,41 +157,44 @@
 <div class="app-wrapper">
   <div class="app-container gr-container">
     <div class="app-section-header">The Training</div>
-      <h2>If you are too afraid to color outsides the lines, make bold decisions with your career, or take action from your gut, stay far away from us.</h2>
-      <ul class="app-ul-fa fa-ul">
-        <li><i class="app-fa fa fa-check"></i>College administrators hate us because we challenge their system</li>
-        <li><i class="app-fa fa fa-check"></i>PhD students hate us because we are too practical for them to handle</li> 
-        <li><i class="app-fa fa fa-check"></i>College students who follow all the rules hate us because we’re too real</li>
-      </ul>
-      <p>If you have always sensed something was missing from your formal education, if you’ve always wanted something more practical to sink your teeth into, and if you have an ambitious voice in the back of your head telling you to TAKE MORE ACTION, then this is the beginning of a beautiful relationship.</p> 
+      <div class="gr-row">
+        <div class="gr-col-8 gr-col-offset-2">
+          <h2 class="app-align-c app-txt-l">If you are too afraid to color outsides the lines, make bold decisions with your career, or take action from your gut, stay far away from us.</h2>
+          <ul class="app-ul-fa fa-ul app-txt-l">
+            <li><i class="app-fa fa-li fa fa-check color-g"></i>College administrators hate us because we challenge their system</li>
+            <li><i class="app-fa fa-li fa fa-check color-g"></i>PhD students hate us because we are too practical for them to handle</li> 
+            <li><i class="app-fa fa-li fa fa-check color-g"></i>College students who follow all the rules hate us because we’re too real</li>
+          </ul>
+          <p class="app-txt-l">If you have always sensed something was missing from your formal education, if you’ve always wanted something more practical to sink your teeth into, and if you have an ambitious voice in the back of your head telling you to TAKE MORE ACTION, then this is the beginning of a beautiful relationship.</p> 
 
-      <%# Optin %>
-      <div class="app-optin">
-        <p><strong>Enter your email address if you want:</strong></p>
-        <ul class="app-ul-fa fa-ul">
-          <li><i class="app-fa fa fa-check"></i>Early access, reminders, and follow ups to everything we put out?</li>
-          <li><i class="app-fa fa fa-check"></i>To start getting the attention in your career you know you deserve?</li>
-          <li><i class="app-fa fa fa-check"></i>To stop dreaming so much and start taking more action?</li>
-        </ul>
-        <div class="gr-row">
-          <div class="app-field gr-col-6">
-            <input type="text" class="app-input-l" placeholder="First name only" required />
+          <%# Optin %>
+          <div class="app-optin">
+            <h2 class="app-align-c">Enter your email address if you want:</h2>
+            <ul class="app-ul-fa fa-ul">
+              <li><i class="app-fa fa-li fa fa-check color-g"></i>Early access, reminders, and follow ups to everything we put out?</li>
+              <li><i class="app-fa fa-li fa fa-check color-g"></i>To start getting the attention in your career you know you deserve?</li>
+              <li><i class="app-fa fa-li fa fa-check color-g"></i>To stop dreaming so much and start taking more action?</li>
+            </ul>
+            <div class="gr-row">
+              <div class="app-field gr-col-6">
+                <input type="text" class="app-input-l" placeholder="First name only" required />
+              </div>
+              <div class="app-field gr-col-6">
+                <input type="text" class="app-input-l" placeholder="Email address" required data-parsley-type="email" />
+              </div>
+            </div>
+            <input type="submit" value="I'm in!" class="app-btn-l app-btn-w app-btn" />
           </div>
-          <div class="app-field gr-col-6">
-            <input type="text" class="app-input-l" placeholder="Email address" required data-parsley-type="email" />
-          </div>
+          <p><strong>OH, BTW</strong></p>
+          <p>If you are an aspiring entrepreneur between the ages of 16 and 36 and you’re overwhelmed by all the information, strategies, and NOISE in the world right now for entrepreneurs, <strong>be careful, something (even more substantial) is missing from your entrepreneurial education</strong>.</p>
+          <ul class="app-ul-fa fa-ul">
+            <li><i class="app-fa fa-li fa fa-check color-g"></i>Forget the world of APPS and the allure of Silicon Valley</li>
+            <li><i class="app-fa fa-li fa fa-check color-g"></i>Forget about coding, hackathoning, and raising capital</li>
+            <li><i class="app-fa fa-li fa fa-check color-g"></i>Forget about everything you think you know about starting a business</li>
+          </ul>
+          <p>There’s a reason 9/10 businesses (entrepreneurs) FAIL. Find out more about this problem and our premier training program <a href="#">The Workshop School of Action</a>.</p>
         </div>
-        <input type="submit" value="I'm in!" class="app-btn-l app-btn-w app-btn" />
       </div>
-      <p>OH, BTW</p>
-      <p>If you are an aspiring entrepreneur between the ages of 16 and 36 and you’re overwhelmed by all the information, strategies, and NOISE in the world right now for entrepreneurs, <strong>be careful, something (even more substantial) is missing from your entrepreneurial education</strong>.</p>
-      <ul class="app-ul-fa fa-ul">
-        <li><i class="app-fa fa fa-check"></i>Forget the world of APPS and the allure of Silicon Valley</li>
-        <li><i class="app-fa fa fa-check"></i>Forget about coding, hackathon ing, and raising capital</li>
-        <li><i class="app-fa fa fa-check"></i>Forget about everything you think you know about starting a business</li>
-      </ul>
-      <p>There’s a reason 9/10 businesses (entrepreneurs) FAIL. Find out more about this problem and our premier training program <a href="#">The Workshop School of Action</a>.</p>
-    </div>
     </div>
   </div>
 </div>

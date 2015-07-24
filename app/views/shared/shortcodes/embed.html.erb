@@ -1,0 +1,9 @@
+<% if @attributes[:source] == "vimeo" %>
+  <div class="app-embed-video-vimeo app-embed-video <% if @attributes[:margin] == "none" %>app-embed-nm <% end %>app-embed">
+    <iframe src="//player.vimeo.com/video/<%= @attributes[:id] %>" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+<% elsif @attributes[:source] == "youtube" %>
+  <div class="app-embed-video-youtube app-embed-video <% if @attributes[:margin] == "none" %>app-embed-nm <% end %> app-embed">
+    <iframe width="100%" height="100%" src="//www.youtube.com/embed/<%= @attributes[:id] %>?modestbranding=1&rel=0&showinfo=0&theme=light&color=white" frameborder="0" allowfullscreen></iframe>
+  </div>
+<% end %>

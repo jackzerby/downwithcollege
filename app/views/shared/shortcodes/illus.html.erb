@@ -1,0 +1,3 @@
+<div class="app-illus <% if @attributes[:float] == "right" %>app-illus-float-r <% end %><% if @attributes[:float] == "left" %>app-illus-float-l <% end %><% if @attributes[:align] == "center" %>app-illus-align-c <% end %>">
+  <span class="illus-<%= @attributes[:id] %> illus" style="font-size:<%= @attributes[:size] %>px; <% if @attributes[:height] %>line-height:<%= @attributes[:height] %>px;<% end %>"></span>
+</div>
