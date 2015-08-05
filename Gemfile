@@ -12,10 +12,8 @@ end
 gem 'therubyracer', :platform=>:ruby
 gem 'thin'
 
-# js
-gem 'coffee-rails', '~> 4.1.0'
+# jquery
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
 gem 'jquery-cookie-rails'
 
 # misc
@@ -27,7 +25,6 @@ gem 'shortcode'
 gem 'simple_form'
 gem 'ckeditor', '4.0.4'
 gem 'meta-tags', :require => 'meta_tags'
-gem 'foreigner'
 
 # heroku
 gem 'figaro'

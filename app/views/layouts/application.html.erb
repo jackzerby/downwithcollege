@@ -16,8 +16,11 @@
     <%= javascript_include_tag "application" %>
   	<%= render "shared/plugin_typekit" %>
   </head>
-  <body class="app<% if is_mobile? %> app-mobile<% else %> app-desktop<% end %> app-controller-<% if controller.class.parent.to_s != "Object" %><%= controller.class.parent.to_s.downcase %>-<% end %><%= controller_name %> app-controller-action-<%= action_name %><% if @body_class.present? %> <%= @body_class %><% end %>">
-
+  <body class="app<% if is_mobile? %> app-mobile<% else %> app-desktop<% end %> app-controller-<%= controller_name %> app-controller-action-<%= action_name %><% if @body_class.present? %> <%= @body_class %><% end %>">
+    
+    <%# Nav %>
+		<%= render "shared/nav" %>
+		
     <%# Messages %>
 		<%= render "shared/messages" %>
 		

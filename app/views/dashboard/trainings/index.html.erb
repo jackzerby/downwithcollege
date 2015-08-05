@@ -1,0 +1,10 @@
+<div class="gr-container">
+  <h1>Training</h1>
+  <div class="gr-row">
+    <% @trainings.each do |training|%>
+      <section class="gr-col-4">
+        <%= render "shared/snippet", :thumb => "app-programs-1-thumb.png", :link => dashboard_training_path(training), :title => training.title, :subtitle => "subtitle", :caption => "caption" %>
+      </section>
+    <% end %>
+  </div>
+</div>

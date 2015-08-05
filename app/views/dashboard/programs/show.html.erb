@@ -1,0 +1,10 @@
+<div class="gr-container">
+  <h1><%= @program.title %></h1>
+  <div class="gr-row">
+    <% @program.episodes.each do |episode|%>
+      <section class="gr-col-4">
+        <%= render "shared/snippet", :thumb => "app-programs-1-thumb.png", :link => dashboard_episode_path(episode), :title => episode.title, :subtitle => "subtitle", :caption => "caption" %>
+      </section>
+    <% end %>
+  </div>
+</div>

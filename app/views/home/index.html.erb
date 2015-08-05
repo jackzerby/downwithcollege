@@ -1,5 +1,5 @@
 <%# Header %>
-<h1 class="app-header-h1-mast app-header-h1"><span class="app-header-h1-text">Be Careful. There’s something missing <br />from your formal education.</span></h1>
+<h1 class="app-header-h1"><span class="app-header-h1-text">Be Careful. There’s something missing <br />from your formal education.</span></h1>
 
 <%# Intro %>
 <div class="app-wrapper app-txt-l">
@@ -32,27 +32,16 @@
 <%# The Programs %>
 <div class="app-wrapper-dark app-wrapper">
   <div class="app-container gr-container">
-    <div class="app-section-header-alt app-section-header"><span class="app-section-header-alt-text">The Programs</span></div>
-    <h2 class="app-align-c">Want To Be The Coolest College Student In The World And Optin To Our Awesome Email?</h2>
+    <div class="app-section-header-alt app-section-header">
+      <span class="app-section-header-alt-text">The Programs</span>
+    </div>
+    <h2 class="app-align-c">This Will Be the Best Headline Ever</h2>
     <div class="gr-row">
-      <section class="app-grid-thumb gr-col-4">
-        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), programs_showdown_index_path %>
-        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
-        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </section>
-      <section class="app-grid-thumb gr-col-4">
-        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), programs_copywriting_index_path %>
-        <h3 class="app-grid-thumb-title"><a href="#">Crazy Copywriting Crazy Tony</a></h3>
-        <div class="app-grid-thumb-subtitle"><em>It’s Crazy How Bad Entry-Level Grads Suck Writing</em></div>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </section>
-      <section class="app-grid-thumb gr-col-4">
-        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), programs_onehundred_index_path %>
-        <h3 class="app-grid-thumb-title"><a href="#">100 Dollar Bill Sales Challenge</a></h3>
-        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </section>
+      <% @programs.each do |program|%>
+        <section class="gr-col-4">
+          <%= render "shared/snippet", :thumb => "app-programs-1-thumb.png", :link => dashboard_program_path(program), :title => program.title, :subtitle => "subtitle", :caption => "caption" %>
+        </section>
+      <% end %>
     </div>
   </div>
 </div>
@@ -62,38 +51,30 @@
   <div class="app-container gr-container">
     <div class="app-section-header">Read These Books</div>
     <h2 class="app-align-c">50 Business Books You’d Be Stupid Not To Try And Read.</h2>
-    <section class="app-tabs-container">
-      <div class="app-tabs">
-        <a href="#" data-category="all" class="js-selected js-books-tab app-tabs-tab">All</a>
-        <a href="#" data-category="business" class="js-books-tab app-tabs-tab">Business</a>
-        <a href="#" data-category="marketing" class="js-books-tab app-tabs-tab">Marketing</a>
-        <a href="#" data-category="design" class="js-books-tab app-tabs-tab">Design</a>
-      </div>
-    </section>
     <div class="gr-row">
-      <div class="gr-row-v gr-col-2">
-         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'marketing' }, :class => "js-books-book app-thumb"), "#" %>
+      <div class="gr-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :class => "app-thumb-light app-thumb"), "#" %>
       </div>
-      <div class="gr-row-v gr-col-2">
-         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'marketing' }, :class => "js-books-book app-thumb"), "#" %>
+      <div class="gr-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :class => "app-thumb-light app-thumb"), "#" %>
       </div>
-      <div class="gr-row-v gr-col-2">
-         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'design' }, :class => "js-books-book app-thumb"), "#" %>
+      <div class="gr-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :class => "app-thumb-light app-thumb"), "#" %>
       </div>
-      <div class="gr-row-v gr-col-2">
-         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'marketing' }, :class => "js-books-book app-thumb"), "#" %>
+      <div class="gr-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :class => "app-thumb-light app-thumb"), "#" %>
       </div>
-      <div class="gr-row-v gr-col-2">
-         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'business' }, :class => "js-books-book app-thumb"), "#" %>
+      <div class="gr-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :class => "app-thumb-light app-thumb"), "#" %>
       </div>
-      <div class="gr-row-v gr-col-2">
-         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'business' }, :class => "js-books-book app-thumb"), "#" %>
+      <div class="gr-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :class => "app-thumb-light app-thumb"), "#" %>
       </div>
-      <div class="gr-row-v gr-col-2">
-         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'business' }, :class => "js-books-book app-thumb"), "#" %>
+      <div class="gr-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :class => "app-thumb-light app-thumb"), "#" %>
       </div>
-      <div class="gr-row-v gr-col-2">
-         <%= link_to image_tag("app-books-1-thumb.png", :data => { :category => 'design' }, :class => "js-books-book app-thumb"), "#" %>
+      <div class="gr-v gr-col-2">
+         <%= link_to image_tag("app-books-1-thumb.png", :class => "app-thumb-light app-thumb"), "#" %>
       </div>
     </div>
   </div>
@@ -102,53 +83,24 @@
 <%# The Programs %>
 <div class="app-wrapper-dark app-wrapper">
   <div class="app-container gr-container">
-    <div class="app-section-header-alt app-section-header"><span class="app-section-header-alt-text">The Training</span></div>
+    <div class="app-section-header-alt app-section-header">
+      <span class="app-section-header-alt-text">The Training</span>
+    </div>
     <div class="gr-row">
       <div class="gr-col-8 gr-col-offset-2">
         <section>
-          <h2 class="app-align-c">Want To Be The Coolest College Student In The World And Optin To Our Awesome Email?</h2>
+          <h2 class="app-align-c">This Will Be the Best Headline Ever</h2>
           <p class="app-txt-l">Your classes are filled with INFORMATION but give you no practical experience outside the classroom. The only SKILLS you develop are memorization and regurgitation.  And internships really only introduce you to the corporate environment, they don’t train you.</p>
           <p class="app-txt-l">We’re building the most ACTIONABLE training platform for young adults to help them develop the SKILLS they need to build their own business or help someone else build theirs.  COMING SOON. Only training being offered right now is through The Workshop School of Action.</p>
         </section>
       </div>
     </div>
     <div class="gr-row">
-      <section class="app-grid-thumb gr-col-4">
-        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
-        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
-        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </section>
-      <section class="app-grid-thumb gr-col-4">
-        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
-        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
-        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </section>
-      <section class="app-grid-thumb gr-col-4">
-        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
-        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
-        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </section>
-      <section class="app-grid-thumb gr-col-4">
-        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
-        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
-        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </section>
-      <section class="app-grid-thumb gr-col-4">
-        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
-        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
-        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </section>
-      <section class="app-grid-thumb gr-col-4">
-        <%= link_to image_tag("app-programs-1-thumb.png", :class => "app-thumb-dark app-thumb"), root_path %>
-        <h3 class="app-grid-thumb-title"><a href="#">The Entrepreneur’s Showdown</a></h3>
-        <div class="app-grid-thumb-subtitle"><em>IDEA or the ENTREPRENEUR?</em></div>
-        We give 500 dollars to the most impressive entrepreneur who can demonstrate the most potential in a classic 1v1, fight to the death, game show.
-      </section>
+      <% @trainings.each do |training|%>
+        <section class="gr-col-4">
+          <%= render "shared/snippet", :thumb => "app-programs-1-thumb.png", :link => dashboard_training_path(training), :title => training.title, :subtitle => "subtitle", :caption => "caption" %>
+        </section>
+      <% end %>
     </div>
   </div>
 </div>
@@ -156,7 +108,7 @@
 <%# The Programs %>
 <div class="app-wrapper">
   <div class="app-container gr-container">
-    <div class="app-section-header">The Training</div>
+    <div class="app-section-header">The Why</div>
       <div class="gr-row">
         <div class="gr-col-8 gr-col-offset-2">
           <h2 class="app-align-c app-txt-l">If you are too afraid to color outsides the lines, make bold decisions with your career, or take action from your gut, stay far away from us.</h2>

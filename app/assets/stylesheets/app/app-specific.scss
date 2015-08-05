@@ -6,52 +6,66 @@
 /* ----------------------------------------------------
            Logo
 ----------------------------------------------------- */
-.app-logo { display:block; margin:0 auto; padding:30px 0; width:100px; }
+.app-logo { display:block; margin:0 auto; padding:40px 0; width:100px; }
+
+/* ----------------------------------------------------
+           Logo
+----------------------------------------------------- */
+.app-nav { position:relative; }
+.app-nav-trigger { position:fixed; top:-5px; right:-5px; z-index:3; }
+.app-nav-trigger:hover .app-nav-trigger-text { @include ut-rotate(10deg) }
+.app-nav-trigger-text { display:inline-block; padding:10px 15px 10px 10px; @include ut-rotate(-5deg); background:$color_g; color:$color_a; transition:all .25s; }
+.app-nav-back { position:fixed; top:-5px; left:-5px; z-index:3; }
+.app-nav-back-text { display:inline-block; padding:10px 15px 10px 10px; @include ut-rotate(5deg); background:$color_g; color:$color_a; transition:all .25s; }
+.app-nav-back:hover .app-nav-back-text { @include ut-rotate(-10deg) }
+.app-nav-menu { display:none; position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,.95); z-index:2; }
+.app-nav-menu .app-nav-menu-close { display:none; position:absolute; top:10px; right:10px; font-size:36px; line-height:1; }
+.app-nav-menu-items:after { @include ut-clear(); }
+.app-nav-menu-items { width:700px; margin:0 auto; padding:12% 0 0 0; }
+.app-nav-menu-items-item { display:block; float:left; width:50%; padding:15px; }
+.app-nav-menu-items-item:hover { text-decoration:none; }
+.app-nav-menu-items-item-title { display:block; font-size:36px; font-weight:bold; }
+.app-nav-menu-items-item-title:hover { text-decoration:underline; }
+.app-nav-menu-items-item-description { display:block; color:$color_a; }
+.js-nav-active .app-nav-menu { display:block; }
 
 /* ----------------------------------------------------
               Header
  ----------------------------------------------------- */
-.app-header-h1 { margin:0; padding:5% 0; }
+.app-header-h1 { margin:0; padding-right:10px; padding-left:10px; }
 .app-header-h1-text { margin:0; padding:10px 20px; -moz-box-decoration-break:clone; -webkit-box-decoration-break:clone; }
-.app-header-h1-mast { padding:5% 0 15% 0; }
+.app-header-h1 small { display:block; line-height:130%; }
 .app-subheader { margin:0 0 20px 0; font-size:36px; line-height:130%; font-weight:bold; text-align:center; }
-.app-subheader-text { margin:0; padding:10px 20px; -moz-box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+.app-subheader-text { margin:0; padding:10px 20px; color:$color_a; background:$color_g; -moz-box-decoration-break:clone; -webkit-box-decoration-break:clone; }
 .app-subheader + .app-header-h1 { padding:3% 0 5%; }
 
 /* ----------------------------------------------------
-              Grid
- ----------------------------------------------------- */
-.app-grid-thumb img { display:block; margin-bottom:15px; }
-.app-grid-thumb .app-grid-thumb-title { margin:0; }
-.app-grid-thumb .app-grid-thumb-title a { color:$color_a; }
-.app-grid-thumb .app-grid-thumb-subtitle { margin-bottom:10px; color:$color_d; }
-
-/* ----------------------------------------------------
               Home
  ----------------------------------------------------- */
-.app-controller-home { background:image-url("app-home-bg.jpg"); background-attachment:fixed; } 
-.app-controller-home a { color:$color_g; }
+.app-controller-home { background:image-url("app-home-bg.jpg") fixed repeat-x right top; } 
+.app-controller-home .app-header-h1 { padding-top:5%; padding-bottom:15%; }
 .app-controller-home .app-header-h1-text { background:$color_g; color:$color_a; }
 
 /* ----------------------------------------------------
-              Home
+              Programs
  ----------------------------------------------------- */
-.app-controller-programs-copywriting { background:image-url("app-programs-copywriting-bg.jpg"); background-attachment:fixed; } 
-.app-controller-programs-copywriting a { color:$color_g; }
-.app-controller-programs-copywriting .app-header-h1-text { background:$color_g; color:$color_a; }
-.app-controller-programs-onehundred { background:image-url("app-home-bg.jpg"); background-attachment:fixed; } 
-.app-controller-programs-onehundred a { color:$color_g; }
-.app-controller-programs-onehundred .app-header-h1-text { background:$color_g; color:$color_a; }
-.app-controller-programs-showdown { background:image-url("app-home-bg.jpg"); background-attachment:fixed; } 
-.app-controller-programs-showdown a { color:$color_g; }
-.app-controller-programs-showdown .app-header-h1-text { background:$color_g; color:$color_a; }
+.app-controller-programs.app-controller-action-copywriting { background:image-url("app-programs-copywriting-bg.jpg") black repeat-x center top fixed; } 
+.app-controller-programs.app-controller-action-copywriting .app-header-h1 { padding-bottom:10%; font-size:78px; font-family:"coronette"; }
+.app-controller-programs.app-controller-action-copywriting .app-header-h1 small { margin-top:15px; font-size:42px; }
+.app-controller-programs.app-controller-action-onehundred { background:image-url("app-programs-onehundred-bg.jpg") black no-repeat center top fixed; }
+.app-controller-programs.app-controller-action-onehundred .app-header-h1 { padding-bottom:12%; font-size:98px; color:$color_a; }
+.app-controller-programs.app-controller-action-onehundred .app-header-h1 small { margin-top:5px; font-size:42px; }
+.app-controller-programs.app-controller-action-showdown { background:image-url("app-programs-showdown-bg.jpg") black repeat-x center top fixed; }
+.app-controller-programs.app-controller-action-showdown .app-header-h1 { padding:4% 0 9% 0; font-size:100px; line-height:1; text-transform:uppercase; font-family:"proxima-nova"; @include ut-text-shadow(1px 1px 0 black); color:$color_a; }
+.app-controller-programs.app-controller-action-showdown .app-header-h1 small { margin-top:15px; font-size:36px; text-transform:capitalize; }
+
+/* ----------------------------------------------------
+              Dashboard
+ ----------------------------------------------------- */
+.app-controller-dashboard { background:$color_f; color:$color_a; }
+.app-controller-programs { background:$color_f; color:$color_a; }
+.app-controller-episodes { background:$color_f; color:$color_a; }
 
 
 
-
-
-
-
-.app-section-header-alt-text { color:$color_a; background:$color_g; }
-.app-subheader-text { color:$color_a; background:$color_g; }
 

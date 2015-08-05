@@ -16,15 +16,41 @@ ActiveRecord::Schema.define(version: 20150722164437) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "programs", force: :cascade do |t|
+  create_table "episodes", force: :cascade do |t|
     t.string   "title"
     t.text     "caption"
     t.text     "description"
-    t.string   "category"
-    t.string   "subcategory"
     t.string   "thumb"
+    t.string   "media"
+    t.string   "slug"
+    t.integer  "program_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "episodes", ["slug"], name: "index_episodes_on_slug", using: :btree
+
+  create_table "programs", force: :cascade do |t|
+    t.string   "title"
+    t.text     "caption"
+    t.text     "description"
+    t.string   "thumb"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "programs", ["slug"], name: "index_programs_on_slug", using: :btree
+
+  create_table "trainings", force: :cascade do |t|
+    t.string   "title"
+    t.text     "caption"
+    t.text     "description"
+    t.string   "thumb"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_foreign_key "episodes", "programs"
 end

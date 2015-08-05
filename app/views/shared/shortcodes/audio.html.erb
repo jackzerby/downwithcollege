@@ -2,7 +2,7 @@
 <div id="app_jp_<%= @attributes[:id] %>" class="app-jplayer jp-jplayer" data-id="<%= @attributes[:id] %>" data-file="<%= @attributes[:file] %>"></div>
 
 <%# JP Audio %>
-<div id="app_jp_audio_<%= @attributes[:id] %>" class="<% if @attributes[:size] %>app-audio-size-<%= @attributes[:size] %> <% end %><% if @attributes[:type] %>app-audio-<%= @attributes[:type] %> <% end %> app-audio jp-audio" data-id="<%= @attributes[:id] %>">
+<div id="app_jp_audio_<%= @attributes[:id] %>" class="<% if @attributes[:size] %>app-audio-size-<%= @attributes[:size] %> <% end %><% if @attributes[:type] %>app-audio-<%= @attributes[:type] %> <% end %><% if @attributes[:color] %>app-audio-<%= @attributes[:color] %> <% end %>app-audio jp-audio" data-id="<%= @attributes[:id] %>">
   
   <%# Arrow %>
   <% if @attributes[:arrow] %>

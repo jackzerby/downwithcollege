@@ -8,16 +8,18 @@
 ----------------------------------------------------- */
 .gr-container { margin-right:auto; margin-left:auto; padding-left:10px; padding-right:10px; }
 .gr-container:before, .gr-container:after, .gr-row:before, .gr-row:after { @include ut-clear(); }
-.gr-container * { @include ut-box-sizing(border-box); }
-.gr-container *:before, *:after { @include ut-box-sizing(border-box); }
 .gr-container [class*="gr-mob"],
 .gr-container [class*="gr-tab"],
 .gr-container [class*="gr-lap"],
 .gr-container [class*="gr-col"] { min-height:1px; padding-left:10px; padding-right:10px; }
+.gr-container [class*="gr-mob-v"],
+.gr-container [class*="gr-tab-v"],
+.gr-container [class*="gr-lap-v"],
+.gr-container [class*="gr-col-v"] { padding-bottom:20px; }
 .gr-row { margin-left:-10px; margin-right:-10px; }
-.gr-row-v { margin-bottom:20px; }
+.gr-v { margin-bottom:20px; }
 .gr-row-s { margin-left:-5px; margin-right:-5px; }
-.gr-row-s.gr-row-v { margin-bottom:10px; }
+.gr-row-s.gr-v { margin-bottom:10px; }
 .gr-row-s [class*="gr-mob"],
 .gr-row-s [class*="gr-tab"],
 .gr-row-s [class*="gr-lap"],

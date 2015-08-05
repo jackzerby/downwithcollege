@@ -1,0 +1,16 @@
+<div class="gr-container">
+  <h1 class="app-h-sm"><%= @episode.title %></h1>
+  <div class="row">
+    <div class="gr-col-6 gr-col-offset-3">
+      <section class="app-align-c">
+        <%= @episode.description %>
+      </section>
+      <section>
+        <%== Shortcode.process("[audio id='1' title='#{@episode.title}' file='#{@episode.media}' type='bare']") %>
+      </section>
+      <div class="app-align-c">
+        <%= link_to '<i class="fa fa-long-arrow-left"></i>  Go back to '.html_safe + @episode.program.title, dashboard_program_path(@episode.program) %>
+      </div>
+    </div>
+  </div>
+</div>

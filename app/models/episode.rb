@@ -1,9 +1,7 @@
-class Program < ActiveRecord::Base
+class Episode < ActiveRecord::Base
   
   default_scope { order('created_at DESC') } 
-  
-  has_many :episodes
-  
+  belongs_to :program
   def self.from_param(param)
     find_by_slug!(param)
   end

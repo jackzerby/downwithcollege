@@ -8,6 +8,7 @@
 ----------------------------------------------------- */
 body { color:#222222; font-size:16px; line-height:1.5; font-family:$font_a;  }
 body.js-fixed { overflow:hidden; }
+a { color:$color_g; }
 
 /* ----------------------------------------------------
            Sections
@@ -53,7 +54,7 @@ body.js-fixed { overflow:hidden; }
 .app .app-h-nb { font-weight:normal; }
 .app-section-header { margin-bottom:20px; font-size:36px; line-height:1; text-align:center; font-weight:bold; text-transform:uppercase; color:$color_g; }
 .app-section-header-alt { margin-bottom:60px; }
-.app-section-header-alt-text { display:inline-block; padding:10px; @include ut-rotate(-5deg); }
+.app-section-header-alt-text { display:inline-block; padding:10px; color:$color_a; background:$color_g; @include ut-rotate(-5deg); }
 
 /* ----------------------------------------------------
             Text
@@ -123,10 +124,22 @@ body.js-fixed { overflow:hidden; }
 /* ----------------------------------------------------
            Thumb
 ----------------------------------------------------- */
-.app-thumb { display:block; padding:2px; background:$color_c; }
-.app-thumb:hover { background:$color_f; }
-.app-thumb-dark { background:$color_e; }
-.app-thumb-dark:hover { background:$color_a; }
+.app-thumb { display:block; padding:2px; background:$color_e; vertical-align:top; }
+.app-thumb:hover { background:$color_a; }
+.app-thumb-light { background:$color_c; }
+.app-thumb-light:hover { background:$color_f; }
+
+/* ----------------------------------------------------
+              Grid
+ ----------------------------------------------------- */
+.app-snippet .app-snippet-thumb { display:block; margin-bottom:15px; }
+.app-snippet .app-snippet-thumb img { display:block; padding:2px; background:$color_e; vertical-align:top; }
+.app-snippet:hover .app-snippet-thumb img { background:$color_a; }
+.app-snippet .app-snippet-title { margin:0; }
+.app-snippet .app-snippet-title a { color:inherit; }
+.app-snippet .app-snippet-subtitle { margin-bottom:10px; color:$color_d; }
+.app-snippet-light img { background:$color_c; }
+.app-snippet-light:hover img { background:$color_f; }
 
 /* ----------------------------------------------------
             Button
@@ -157,9 +170,7 @@ body.js-fixed { overflow:hidden; }
 /* ----------------------------------------------------
             Optin
 ----------------------------------------------------- */
-.app-optin { margin-bottom:40px; padding:30px; border:1px solid $color_c; background:$color_b; }
-
-
+.app-optin { margin-bottom:40px; padding:30px; border:4px solid $color_g; background:$color_b; }
 
 /* ----------------------------------------------------
             Display
@@ -169,5 +180,5 @@ body.js-fixed { overflow:hidden; }
 .app-align-l { text-align:left; }
 .app-rel { position:relative; }
 .app-clear:after { content:""; display:block; clear:both; height:0; visibility:hidden; }
-
+.app-vat { vertical-align:top; }
 

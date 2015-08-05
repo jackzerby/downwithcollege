@@ -1,0 +1,6 @@
+<div class="<%= extra if local_assigns[:extra] %> app-snippet">
+  <%= link_to image_tag("#{thumb}"), link, :class => "app-snippet-thumb" %>
+  <h3 class="app-snippet-title"><a href="#"><%= title %></a></h3>
+  <div class="app-snippet-subtitle"><em><%= subtitle %></em></div>
+  <%= caption %>
+</div>
