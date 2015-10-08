@@ -7,12 +7,30 @@
             Desktop
 ----------------------------------------------------- */
 @media only screen and (min-width: 1024px) {
-  
+  .app-nav-menu { position:fixed; top:-4px; right:0px; font-size:14px; line-height:1; font-weight:bold; @include ut-rotate(-2deg); background:$color_g; transition:all .25s; z-index:3; }
+  .app-nav-menu:after { @include ut-clear(); }
+  .app-nav-menu-item-header { display:block; padding:15px; color:$color_a; }
+  .app-nav-menu-item { float:right; }
+  .app-nav-menu-item:hover .app-nav-menu-item-header { background:$color_f; text-decoration:none; }
+  .app-nav-menu-item:hover .app-nav-menu-item-links { display:block; }
+  .app-nav-menu-item-links { display:none; position:absolute; top:43px; background:$color_f; }
+  .app-nav-menu-item-links-link { display:block; padding:15px 15px; color:$color_a; }
+  .app-nav-menu-item-links-link:hover { background:$color_e; text-decoration:none; }
+  .app-context-dashboard .app-nav-menu-item:hover .app-nav-menu-item-header { background:$color_a; color:$color_e; }
+  .app-context-dashboard .app-nav-menu-item-links { background:$color_a; }
+  .app-context-dashboard .app-nav-menu-item-links-link { color:$color_e; }
+  .app-context-dashboard .app-nav-menu-item-links-link:hover { background:$color_c; }
 }
 
 /* ----------------------------------------------------
             Mobile
 ----------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
- 
+  .app-nav-menu { display:none; position:fixed; top:0; right:0; bottom:0; left:0; padding-top:60px; text-align:center; background:rgba(0,0,0,.95); z-index:2; }
+  .app-nav-menu-item { margin-bottom:20px; }
+  .app-nav-menu-item-header { display:block; margin:0 0 5px 0; font-size:24px; font-weight:bold; color:$color_a; }
+  .app-nav-menu-item-links-link { display:block; margin:0 0 5px 0; font-size:18px; }
+  .app-nav-trigger { display:block; }
+  .app-nav-back { display:block; }
+  .js-nav-active .app-nav-menu { display:block; }
 }

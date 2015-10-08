@@ -1,5 +1,10 @@
-<% @programs.each do |program|%>
-  <section class="gr-col-4">
-    <%= render "shared/snippet", :thumb => "app-programs-1-thumb.png", :link => dashboard_program_path(program), :title => program.title, :subtitle => "subtitle", :caption => "caption" %>
-  </section>
-<% end %>
+<div class="gr-container">
+  <h1>Programs</h1>
+  <div class="gr-row">
+    <% @programs.each do |program|%>
+      <section class="gr-col-4">
+        <%= render "shared/snippet", :thumb => "app-programs-1-thumb.png", :link => dashboard_program_path(program), :title => program.title, :subtitle => "subtitle", :caption => "caption" %>
+      </section>
+    <% end %>
+  </div>
+</div>
